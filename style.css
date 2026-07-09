@@ -1,122 +1,395 @@
-* {
-  margin-top: 0;
-  margin-left: 0;
-  
-  
-  
+/* ===== RESET ===== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== SISTEMA DE NAVEGAÇÃO INTERATIVA (APENAS CSS) ===== */
+
+/* 1. Esconde todas as seções de página por padrão */
+.secao-pagina {
+    display: none;
+}
+
+/* 2. Mostra a primeira seção (Início) quando o site abre sem nenhuma hashtag na URL */
+.secao-pagina:first-of-type {
+    display: block;
+}
+
+/* 3. Se o usuário clicar em qualquer link (ativando um :target), esconde o Início padrão */
+html:has(:target) #inicio {
+    display: none;
+}
+
+/* 4. Mostra exclusivamente a seção que possui a ID igual à hashtag clicada */
+.secao-pagina:target {
+    display: block !important;
 }
 
 
+/* ===== HEADER ===== */
 
+header{
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-.navbar img {
-  
-  height: 100%;
-  width: 90px;
-  
+.logo h1{
+    color: #00aaff;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.menu a:hover{
+    color: #00aaff;
 }
 
 
-/* NAVIGATION BAR */
-.navbar {
-  display: flex;
-  width: 98%;
-  height: 100px;
-  background-color: #10580b;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  
+/* ===== BANNER ===== */
+
+.banner{
+    background: url("../img/banner.jpg") center/cover no-repeat #222; /* Adicionado fallback de cor caso não ache a imagem */
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-texto{
+    background: rgba(0,0,0,.6);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.banner h2{
+    font-size: 45px;
+}
+
+.banner p{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.btn{
+    background: #00aaff;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: .3s;
+    display: inline-block;
+}
+
+.btn:hover{
+    background: #0077cc;
 }
 
 
-.navlinks {
-  display: flex;
-  gap: 20px;
-  margin-right: 10%;
+/* ===== TITULOS ===== */
+
+.titulo-pagina{
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.navlinks a {
-  color: white;
-  background-color: #31a252;
-  font-weight: bold;
-  padding: 10px;
-  height: 60px;
-  width: 120px;
-  border: solid 2px orange;
-  border-radius: 5px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  
+.titulo-pagina h2{
+    font-size: 38px;
+    color: #111;
 }
 
-.navlinks a:hover {
-  background-color: #268040;
-  border-color: #ff9f1a;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-h1{
-  margin-top: 150px;
-  justify-self: center;
-  
-  font-size: 40px;
-  color: #1EA61F;
-  
-}
-
-#cards {
-  display: grid;
-  margin-top: 15px;
-  margin-left: 5%;
-  margin-right: 5%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  border-radius: 20px;
-  border: solid 2px black;
-  align-items: center;
-  justify-items: center;
-  gap: 20px;
-  padding: 5px;
-  
-}
-
-#cards div img {
-  
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  
-  
+.titulo-pagina p{
+    margin-top: 10px;
 }
 
 
-#cards div {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  border-radius: 20px;
-  padding: 0;
-  border: solid 2px orange;
-  text-align: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  
-  background-color: #389DE5;
-  color: white;
+/* ===== CARDS DA HOME ===== */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3, .card p{
+    margin: 15px;
+}
+
+
+/* ===== GRID PRODUTOS ===== */
+
+.grid-produtos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.produto{
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    text-align: center;
+    transition: .3s;
+}
+
+.produto:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.produto img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produto h3{
+    margin: 15px 0;
+}
+
+.produto p{
+    margin-bottom: 15px;
+}
+
+.produto h4{
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.produto button{
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.produto button:hover{
+    background: #0077cc;
+}
+
+
+/* ===== SOBRE ===== */
+
+.sobre{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px;
+}
+
+.sobre article{
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.sobre article:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.curiosidade{
+    margin: 40px;
+    padding: 25px;
+    background: #e8f6ff;
+    border-left: 8px solid #00aaff;
+    border-radius: 10px;
+}
+
+
+/* ===== FORMULÁRIO ===== */
+
+.formulario{
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario label{
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus{
+    outline: none;
+    border-color: #00aaff;
+}
+
+.radio,
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.formulario button{
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.formulario button:hover{
+    background: #0077cc;
+}
+
+
+/* ===== PROMOÇÃO ===== */
+
+.promocao{
+    background: #00aaff;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer{
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .banner{
+        height: 300px;
+        padding: 20px;
+    }
+
+    .banner h2{
+        font-size: 30px;
+    }
+
+    .banner p{
+        font-size: 16px;
+    }
+
+    .cards,
+    .grid-produtos{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .sobre{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .promocao{
+        margin: 20px;
+    }
+
+    .formulario{
+        margin: 20px;
+        padding: 20px;
+    }
 }
