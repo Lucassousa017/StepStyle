@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 
 *{
     margin: 0;
@@ -17,30 +17,27 @@ body{
     line-height: 1.6;
 }
 
-/* ===== SISTEMA DE NAVEGAÇÃO INTERATIVA (APENAS CSS) ===== */
-
-/* 1. Esconde todas as seções de página por padrão */
 .secao-pagina {
     display: none;
 }
 
-/* 2. Mostra a primeira seção (Início) quando o site abre sem nenhuma hashtag na URL */
+
 .secao-pagina:first-of-type {
     display: block;
 }
 
-/* 3. Se o usuário clicar em qualquer link (ativando um :target), esconde o Início padrão */
+
 html:has(:target) #inicio {
     display: none;
 }
 
-/* 4. Mostra exclusivamente a seção que possui a ID igual à hashtag clicada */
+
 .secao-pagina:target {
     display: block !important;
 }
 
 
-/* ===== HEADER ===== */
+
 
 header{
     background: #111;
@@ -76,7 +73,7 @@ header{
 }
 
 
-/* ===== BANNER ===== */
+
 
 .banner{
     background: url("../img/banner.jpg") center/cover no-repeat #222; /* Adicionado fallback de cor caso não ache a imagem */
@@ -118,7 +115,7 @@ header{
 }
 
 
-/* ===== TITULOS ===== */
+
 
 .titulo-pagina{
     text-align: center;
@@ -135,7 +132,7 @@ header{
 }
 
 
-/* ===== CARDS DA HOME ===== */
+
 
 .cards{
     display: grid;
@@ -168,7 +165,7 @@ header{
 }
 
 
-/* ===== GRID PRODUTOS ===== */
+
 
 .grid-produtos{
     display: grid;
@@ -226,7 +223,7 @@ header{
 }
 
 
-/* ===== SOBRE ===== */
+
 
 .sobre{
     display: flex;
@@ -258,7 +255,7 @@ header{
 }
 
 
-/* ===== FORMULÁRIO ===== */
+
 
 .formulario{
     max-width: 700px;
@@ -321,7 +318,7 @@ header{
 }
 
 
-/* ===== PROMOÇÃO ===== */
+
 
 .promocao{
     background: #00aaff;
@@ -333,7 +330,7 @@ header{
 }
 
 
-/* ===== FOOTER ===== */
+
 
 footer{
     background: #111;
@@ -344,7 +341,7 @@ footer{
 }
 
 
-/* ===== RESPONSIVIDADE ===== */
+
 
 @media (max-width: 768px){
 
