@@ -1,83 +1,189 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepStyle - Loja de Tênis</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  
-  <nav class="navbar">
-    
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUfKjXOFTC2X22HvkQx2y0JG8WbPTABzX-K0Cu-gOqSA&s=10" alt="logo" />
-    
-    <div class="navlinks">
-      
-      <a href="index.html">Home</a>
-      <a href="/Futsal-feminino.html">mais vistos</a>
-      <a href="/perfis.html">mais recentes</a>
-      <a href="formulario.html">novidades</a>
-      
+
+<header>
+    <div class="logo">
+        <h1>StepStyle</h1>
     </div>
-  </nav>
-  
-  
-  <section>
-      <h1>destaques da semana</h1>
-    <nav id="cards">
-      
-      <div>
-        <img src="https://media.istockphoto.com/id/465465437/pt/foto/desenvolvimento-web-na-pe%C3%A7a-de-puzzle.webp?a=1&b=1&s=612x612&w=0&k=20&c=S_JZl5tY-Xl2KJManUL0j3zGCRT5R5p9Slfx1MVgbXc=" alt="#" />
-        
-      <a href="">
-      desenvolvimento web</a>
-        <br><br>
-        
-        aprenda os conceitos principis da area e curiosidades
-      </div>
-      
-      
-      <div>
-  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGluZm9ybWF0aW9ufGVufDB8fDB8fHww" alt="#" />
-  
-  <a href="">
-  tecnologia da informaçao</a>
-  <br><br>
-  
-  aprenda os conceitos principis da area e curiosidades
-</div>
 
-<div>
-  <img src="https://plus.unsplash.com/premium_photo-1671394138163-ba8be139614b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z2FzdHJvbm9taXxlbnwwfHwwfHx8MA%3D%3D" alt="#" />
-  
-  <a href="">
-  gastronomia na paatica</a>
-  <br><br>
-  
-  aprenda os conceitos principis da area e curiosidades
-</div>
-
-<div>
-  <img src="https://plus.unsplash.com/premium_photo-1724800663657-3e57bf4f622c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWF0aHxlbnwwfHwwfHx8MA%3D%3D" alt="#" />
-  
-  <a href="">
-  olimpiada de matematica</a>
-  <br><br>
-  
-  aprenda os conceitos principis da area e curiosidades
-</div>
-      
-      
+    <nav>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
     </nav>
-  </section>
+</header>
 
+<main>
 
+    <div id="inicio" class="secao-pagina">
+        <section class="banner">
+            <div class="banner-texto">
+                <h2>Os Melhores Tênis Estão Aqui</h2>
+                <p>Conforto, estilo e qualidade para o seu dia a dia.</p>
+                <a href="#produtos" class="btn">Ver Produtos</a>
+            </div>
+        </section>
 
+        <section class="destaques">
+            <h2>Destaques da Semana</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="https://imgcentauro-a.akamaihd.net/1024x1024/99176834A2.jpg" alt="Tênis Nike Air Max">
+                    <h3>Nike Air Max</h3>
+                    <p>Design moderno e confortável.</p>
+                </article>
+
+                <article class="card">
+                    <img src="https://imgcentauro-a.akamaihd.net/1024x1024/99673831A3.jpg" alt="Tênis Adidas Run">
+                    <h3>Adidas Run</h3>
+                    <p>Ideal para corridas e caminhadas.</p>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1393241/tenis_puma_pro_sport_lth_695_1_8a657b6479627d12a3efb1b92c452920.jpg" alt="Tênis Puma Sport">
+                    <h3>Puma Sport</h3>
+                    <p>Leve e resistente.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="promocao">
+            <h2>Promoção Especial</h2>
+            <p>Até 30% de desconto em modelos selecionados.</p>
+        </aside>
+    </div>
+
+    <div id="produtos" class="secao-pagina">
+        <section class="titulo-pagina">
+            <h2>Nossos Produtos</h2>
+            <p>Confira alguns dos nossos modelos mais vendidos.</p>
+        </section>
+
+        <section class="grid-produtos">
+            <article class="produto">
+                <img src="https://imgcentauro-a.akamaihd.net/1024x1024/99176834A2.jpg" alt="Nike Air Max">
+                <h3>Nike Air Max</h3>
+                <p>Tênis confortável para caminhada e corrida.</p>
+                <h4>R$ 599,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://imgcentauro-a.akamaihd.net/1024x1024/99673831A3.jpg" alt="Adidas Run">
+                <h3>Adidas Run</h3>
+                <p>Ideal para quem busca desempenho.</p>
+                <h4>R$ 499,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://images.tcdn.com.br/img/img_prod/1393241/tenis_puma_pro_sport_lth_695_1_8a657b6479627d12a3efb1b92c452920.jpg" alt="Puma Sport">
+                <h3>Puma Sport</h3>
+                <p>Leve, moderno e resistente.</p>
+                <h4>R$ 459,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFgZ7oEkF7f51KhgK5Swv5HR8G_2b77sUdWDMrgnw_YryLyuvKaoYjJM&s=10" alt="New Balance">
+                <h3>New Balance 574</h3>
+                <p>Perfeito para uso diário.</p>
+                <h4>R$ 649,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://cdn.bnws3.com.br/b2online.com.br/image/cache/data/produtos/asics/masculino/tenis-asics-gel-excite-11-masculino-preto---verde-15861-25-09-19-1200x1200.jpg" alt="Asics Gel">
+                <h3>Asics Gel</h3>
+                <p>Excelente amortecimento.</p>
+                <h4>R$ 699,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://cdn.bnws3.com.br/b2online.com.br/image/cache/data/produtos/mizuno/masculino/tenis-mizuno-wave-mirai-7-masculino-preto---marinho-14357-25-03-06-1200x1200.jpg" alt="Mizuno Wave">
+                <h3>Mizuno Wave</h3>
+                <p>Ideal para corridas de longa distância.</p>
+                <h4>R$ 749,90</h4>
+                <button type="button">Comprar</button>
+            </article>
+        </section>
+    </div>
+
+    <div id="sobre" class="secao-pagina">
+        <section class="titulo-pagina">
+            <h2>Sobre a StepStyle</h2>
+            <p>Conheça um pouco da nossa história.</p>
+        </section>
+
+        <section class="sobre">
+            <article class="historia">
+                <h3>Nossa História</h3>
+                <p>A StepStyle nasceu com o objetivo de oferecer tênis de alta qualidade...</p>
+            </article>
+
+            <article class="missao">
+                <h3>Missão</h3>
+                <p>Levar conforto e qualidade aos nossos clientes através de produtos modernos...</p>
+            </article>
+
+            <article class="visao">
+                <h3>Visão</h3>
+                <p>Ser referência nacional em vendas de tênis esportivos e casuais...</p>
+            </article>
+
+            <article class="valores">
+                <h3>Valores</h3>
+                <ul>
+                    <li>Qualidade</li>
+                    <li>Respeito ao cliente</li>
+                    <li>Compromisso</li>
+                </ul>
+            </article>
+        </section>
+    </div>
+
+    <div id="contato" class="secao-pagina">
+        <section class="titulo-pagina">
+            <h2>Cadastro de Cliente</h2>
+            <p>Preencha os dados abaixo para receber novidades e promoções.</p>
+        </section>
+
+        <section class="formulario">
+            <form action="#">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required minlength="5" placeholder="Digite seu nome">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required placeholder="email@exemplo.com">
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" required pattern="[0-9]{11}" placeholder="89999999999">
+
+                <button type="submit">Enviar Cadastro</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 StepStyle - Todos os direitos reservados.</p>
+</footer>
 
 </body>
+</html>
 
 <footer>
   
